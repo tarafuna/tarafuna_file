@@ -93,8 +93,8 @@
             $edit = $_POST['editnumber'];
             if($edit != ''){                
             $id = $edit; //変更する投稿番号
-            $name = $_POST['editname'];//ここどうすればいいんだろう、、
-	        $comment = $_POST['editcomment']; //！入力した内容で変更させたいけど、、それを全て編集に入れたら何度も使える機能ではなくなるし！
+            $name = $_POST['editname'];
+	        $comment = $_POST['editcomment']; 
 	        $sql = 'UPDATE table08 SET name=:name,comment=:comment WHERE id=:id';
 	        $stmt = $pdo->prepare($sql);
 	        $stmt->bindParam(':name', $name, PDO::PARAM_STR);
